@@ -14,16 +14,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
 
+import static edu.udacity.java.nano.TestHelper.*;
+
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-public class ChatroomTest {
+public class ChatRoomTest {
 
-    private static String USERNAME = "tester";
-    private static String USERNAME_2 = "tester2";
-    private static String BASE_URL = "http://localhost:8080/";
-    private static String CHAT_URL = BASE_URL + "index?username=" + USERNAME;
-    private static String CHAT_URL_2 = BASE_URL + "index?username=" + USERNAME_2;
 
     private static WebDriver webDriver;
 
