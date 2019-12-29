@@ -20,8 +20,10 @@ import java.util.List;
 public class ChatroomTest {
 
     private static String USERNAME = "tester";
+    private static String USERNAME_2 = "tester2";
     private static String BASE_URL = "http://localhost:8080/";
     private static String CHAT_URL = BASE_URL + "index?username=" + USERNAME;
+    private static String CHAT_URL_2 = BASE_URL + "index?username=" + USERNAME_2;
 
     private static WebDriver webDriver;
 
@@ -73,6 +75,43 @@ public class ChatroomTest {
         List<WebElement> messageElements = webDriver.findElements((By.className("message-content")));
         WebElement messageElement = messageElements.get(messageElements.size() - 1);
         Assert.assertEquals(USERNAME + "：" + message, messageElement.getText());
+    }
+
+
+    @Test
+    public void testChatWithTwoUsers() {
+        String messageUser1 = "Hello User 2";
+        String messageUser2 = "Hello User 1";
+
+        webDriver.get(CHAT_URL);
+
+        WebElement messageInput1 = webDriver.findElement(By.id("msg"));
+        messageInput1.sendKeys(messageUser1);
+
+        WebElement sendButton = webDriver.findElement(By.id("send"));
+        sendButton.click();
+
+        WebDriverWait wait = new WebDriverWait(webDriver, 10);
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.className("message-content"), 1));
+
+        List<WebElement> messageElements = webDriver.findElements((By.className("message-content")));
+        WebElement messageElement = messageElements.get(messageElements.size() - 1);
+        Assert.assertEquals(USERNAME + "：" + messageUser1, messageElement.getText());
+
+        webDriver.get(CHAT_URL_2);
+
+        WebElement messageInput2 = webDriver.findElement(By.id("msg"));
+        messageInput2.sendKeys(messageUser2);
+
+        WebElement sendButton_2 = webDriver.findElement(By.id("send"));
+        sendButton_2.click();
+
+        WebDriverWait wait_2 = new WebDriverWait(webDriver, 10);
+        wait_2.until(ExpectedConditions.numberOfElementsToBe(By.className("message-content"), 1));
+
+        List<WebElement> messageElements_2 = webDriver.findElements((By.className("message-content")));
+        WebElement messageElement_2 = messageElements_2.get(messageElements.size() - 1);
+        Assert.assertEquals(USERNAME_2 + "：" + messageUser2, messageElement_2.getText());
     }
 
     @Test
