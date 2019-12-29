@@ -13,6 +13,9 @@ class in chat module. Make sure you cover all there basic actions.
 2. CHAT
 3. LEAVE
 
+![model](description_images/model.jpeg)
+
+
 ### Complete WebSocketChatServer
 Implement all TODOs inside WebSocketChatServer follow each method description.
 
@@ -29,3 +32,8 @@ To help with the configuration of the WebDriver, for tests, I used this lib:
 https://github.com/bonigarcia/webdrivermanager/
 
 #### PrintScreens:
+Login:
+![login](description_images/login.jpeg)
+
+ChatRoom:
+![Print2](description_images/chat_room.jpeg)
