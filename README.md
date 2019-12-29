@@ -19,3 +19,13 @@ Implement all TODOs inside WebSocketChatServer follow each method description.
 ### Run the application with command
 mvn build; mvn spring-boot:run
 
+
+### Tests:
+
+#### Selenium Framework and Junit 
+
+#### Web Driver for Selenium:
+To help with the configuration of the WebDriver, for tests, I used this lib: 
+https://github.com/bonigarcia/webdrivermanager/
+
+#### PrintScreens:
