@@ -29,7 +29,7 @@ mvn build; mvn spring-boot:run
 
 #### Web Driver for Selenium:
 To help with the configuration of the WebDriver, for tests, I used this lib: 
-https://github.com/bonigarcia/webdrivermanager/
+[WebDriverManager](https://github.com/bonigarcia/webdrivermanager/)
 
 #### PrintScreens:
 Login:
@@ -37,3 +37,10 @@ Login:
 
 ChatRoom:
 ![Print2](description_images/chat_room.jpeg)
+
+### Reference Material:
+* [Selenium Assertions](https://www.lambdatest.com/blog/junit-assertions-example-for-selenium-testing/)
+* [Spring Boot Testing](https://stackoverflow.com/questions/51789880/how-to-test-a-component-bean-in-spring-boot)
+* [Selenium and SpringBoot](https://stackoverflow.com/questions/54599169/how-to-configure-selenium-webdriver-with-spring-boot-for-ui-testing)
+* [Git Ignore Generator](https://www.gitignore.io/)
+* [GitHub Markdown Reference](https://guides.github.com/features/mastering-markdown/)
